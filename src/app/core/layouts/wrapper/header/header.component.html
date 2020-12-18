@@ -1,0 +1,38 @@
+<div class="header">
+  <div class="container">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/product-list">
+            Product list
+          </a>
+        </li>
+      </ul>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/new-product">
+            New Product
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="role-box">
+      <label class="role-title" for="role-select">
+        Select role:
+      </label>
+      <select *ngIf="(this.currentRole$ | async) as currentRole"
+              class="role-select"
+              name="roles"
+              id="role-select"
+              (change)="changeRole($event.target.value)"
+      >
+        <option *ngFor="let role of roles | keyvalue"
+                [value]="role.value"
+                [selected]="currentRole === role.value"
+        >
+          {{role.value}}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

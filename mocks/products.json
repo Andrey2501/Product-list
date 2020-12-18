@@ -1,0 +1,78 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "jacket",
+      "category": "clothes",
+      "price": 2000
+    },
+    {
+      "id": 2,
+      "name": "laptop",
+      "category": "computers and laptops",
+      "price": 15999
+    },
+    {
+      "id": 3,
+      "name": "iron",
+      "category": "electronics",
+      "price": 1999
+    },
+    {
+      "id": 4,
+      "name": "shirt",
+      "category": "clothes",
+      "price": 500
+    },
+    {
+      "id": 5,
+      "name": "shorts",
+      "category": "clothes",
+      "price": 850
+    },
+    {
+      "id": 6,
+      "name": "computer",
+      "category": "computers and laptops",
+      "price": 20000
+    },
+    {
+      "id": 8,
+      "name": "fridge",
+      "category": "electronics",
+      "price": 8000
+    },
+    {
+      "id": 10,
+      "name": "blenders",
+      "category": "electronics",
+      "price": 3999,
+      "type": "[Product] Update Product"
+    },
+    {
+      "id": 11,
+      "name": "multicooker",
+      "category": "electronics",
+      "price": 4000
+    },
+    {
+      "id": 12,
+      "name": "sneakers",
+      "category": "clothes",
+      "price": 1500
+    },
+    {
+      "name": "boot",
+      "category": "clothes",
+      "price": 789,
+      "id": 13
+    },
+    {
+      "name": "jeans",
+      "category": "clothes",
+      "price": 999,
+      "type": "[Product] Add Product",
+      "id": 14
+    }
+  ]
+}

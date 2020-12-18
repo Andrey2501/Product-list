@@ -1,0 +1,66 @@
+<h1 class="title">
+  Product list
+</h1>
+<table class="table">
+  <thead>
+  <tr class="raw">
+    <th class="cell header">
+      Id
+    </th>
+    <th class="cell header">
+      Name
+    </th>
+    <th class="cell header">
+      Category
+    </th>
+    <th class="cell header">
+      Price
+    </th>
+    <th class="cell header">
+      Edit
+    </th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let product of products$ | async" class="raw">
+    <td class="cell">
+      {{product.id}}
+    </td>
+    <td class="cell">
+      {{product.name}}
+    </td>
+    <td class="cell">
+      {{product.category}}
+    </td>
+    <td class="cell">
+      {{product.price}}
+    </td>
+    <td class="cell">
+      <a [routerLink]="'/edit-product/' + product.id">
+        <img src="assets/edit-pen.svg" alt="edit" class="img-edit">
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="pagination" *ngIf="(totalCountProducts$ | async) as totalCountProducts">
+  <button class="pagination-btn"
+          (click)="prevPage()"
+          [disabled]="page === 1"
+  >
+    Prev page
+  </button>
+
+  <strong class="pagination-info">
+    Number page {{page}} of {{getCountPages(totalCountProducts)}}
+  </strong>
+
+  <button class="pagination-btn"
+          (click)="nextPage()"
+          [disabled]="checkNextPage(totalCountProducts)"
+  >
+    Next page
+  </button>
+</div>
